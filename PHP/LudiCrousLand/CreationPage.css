@@ -1,31 +1,30 @@
 body {
-    background-color: beige !important;
+    background-color: beige;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #F5DE56; /* Set your preferred header background color */
-    color: #fff; /* Set your preferred header text color */
-    padding: 10px;
-    text-align: center;
+    background-color: #F5DE56;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h1{
-    color: #4A525D; 
+h1 {
+    color: #4A525D;
     font-family: 'Bahnschrift';
     font-weight: bold;
-    padding-top: 10px; 
+    padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    
 }
 
 .row {
     display: flex;
-    justify-content: center; /* Center the child elements horizontally */
-    align-items: center; /* Center the child elements vertically */
+    justify-content: center;
+    align-items: center;
 }
 
 .none {
@@ -33,15 +32,14 @@ h1{
 }
 
 form {
-    max-width: 600px; /* Set your preferred maximum width for the form container */
-    margin: 20px auto; /* Center the form container */
+    max-width: 600px;
+    margin: 20px auto;
     padding: 20px;
-    border: 1px solid #ddd; /* Set your preferred border color */
-    border-radius: 10px; /* Set your preferred border radius */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Set your preferred box shadow */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Add more styling as needed for form elements */
 label {
     display: block;
     margin-bottom: 8px;
@@ -59,8 +57,8 @@ select {
 }
 
 input[type="submit"] {
-    background-color: #007bff; /* Set your preferred submit button background color */
-    color: #fff; /* Set your preferred submit button text color */
+    background-color: #f5b856;
+    color: #fff;
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
@@ -69,5 +67,112 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0056b3; /* Set your preferred hover color */
+    background-color: #f48256;
+}
+
+.container {
+    display: flex;
+    text-align: center;
+}
+
+.logo {
+    width: 100%;
+}
+
+.menu-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background: beige;
+    position: relative;
+    font-size: 18px;
+    perspective: 1000px;
+    z-index: 100;
+}
+
+.dropdown:hover {
+    background: #f5b856;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown_menu li {
+    display: block;
+}
+
+.dropdown_menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px; /* Ajustez la largeur au besoin */
+    perspective: 1000px;
+    z-index: -1;
+}
+
+.dropdown_menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown_menu li a:hover {
+    color: black;
+}
+
+.dropdown_menu li {
+    display: none;
+    color: #fff;
+    background-color: #f5b856;
+    padding: 10px 20px;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.dropdown_menu li:hover {
+    background-color: #f5b856;
+}
+
+.dropdown:hover .dropdown_menu--animated {
+    display: block;
+}
+
+.dropdown_menu--animated {
+    display: none;
+}
+
+.dropdown_menu--animated li {
+    display: block;
+    opacity: 1;
+}
+
+.dropdown_menu-1 .dropdown_item-1 {
+    transform-origin: top center;
+    animation: slideDown 300ms 60ms ease-in-out forwards;
+}
+
+.dropdown_menu-1 .dropdown_item-2 {
+    transform-origin: top center;
+    animation: slideDown 300ms 120ms ease-in-out forwards;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

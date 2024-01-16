@@ -14,27 +14,32 @@
 </head>
 <body>
     <header>
-        <div class="row align-items-center">
-            <div class="none col-1 bars"><i class="barre fa-solid fa-bars"></i></div>
-            
-            <!-- Logo redirigeant vers LudiCrousLand.html -->
-            <div class="col-xl-4 col-11 logo">
-                <a href="LudiCrousLand.html">
-                    <img class="mx-auto d-block" src="image/logo.png" alt="Logo LudiCrousLand">
-                </a>
-            </div>
-            
-            <!-- Bouton pour VisionJeux.html -->
-            <div class="col-xl-4 d-none d-md-block">
-                <a href="VisionJeux.html" class="btn btn-primary">Visionner les Jeux</a>
-            </div>
-            
-            <!-- Bouton de déconnexion -->
-            <div class="col-xl-4 d-none d-md-block">
-                <a href="Connexion.html" class="btn btn-danger">Déconnexion</a>
-            </div>
+        <div  class="menu-container">
+            <nav>
+                <ul class="menu">
+                    <li class="dropdown dropdown-1">Menu
+                        <ul class="dropdown_menu dropdown_menu-1">
+                            <li class="dropdown_item-1">
+                                <a href="LudiCrousLand.html">Accueil</a>
+                            </li>
+                            <li class="dropdown_item-2">
+                                <a href="Connexion.html">Déconnexion</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
         </div>
+        <div class="container">
+            <div>
+                <a href="LudiCrousLand.html">
+                    <img class="logo" src="image/logo.png" alt="Logo LudiCrousLand">
+                </a>
+            </div>            
+        </div>        
     </header>
+
+    
     <h1>Référencer un Nouveau Jeu</h1>
     <form action="traitement_creation_page.php" method="post">
         <label for="nom-jeu">Nom du Jeu :</label>
