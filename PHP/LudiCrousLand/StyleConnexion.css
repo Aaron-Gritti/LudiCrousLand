@@ -1,0 +1,124 @@
+@font-face {  /* implementation de la police good-timing-bd */
+    font-family: good-timing-bd;
+    src: url(font/good-timing-bd.ttf);
+}
+body {     /* personalisation du font de la page */
+    background-attachment: fixed;
+    background-color: beige
+} /* personalisation et positionement du conteneur n°1 */
+.boite1{
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 40px;
+    border: solid 2px;
+    border-color: white;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F4B756;
+    -webkit-box-shadow: 12px 17px 17px 10px rgba(0,0,0,0.65); 
+    box-shadow: 12px 17px 17px 10px rgba(0,0,0,0.65);
+}
+.boite2{  /* personalisation et positionement du conteneur n°2 */
+    padding-left: 40px;
+    padding-right: 40px;
+    border: solid 2px;
+    border-color:white;
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F4B756;
+    -webkit-box-shadow: 12px 17px 17px 10px rgba(0,0,0,0.65); 
+    box-shadow: 12px 17px 17px 10px rgba(0,0,0,0.65);
+}
+a{
+    font-family: 'Calibri', sans-serif;
+    color: black;  
+}
+input[type=submit]{  /* personalisation et positionement du bouton */
+    border-radius: 15px;
+    background-color: #74EC8D;
+    border-color: white;
+    color: black;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    padding: 12px 0px;
+    box-sizing: border-box;
+    width: 100%;
+}
+input[type=text] {  /* centrage + personalisation */
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+}
+input[type=password] {
+    width: 100%;
+    padding-left: 50px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin: 8px 0px;
+    box-sizing: border-box;
+}
+img[id=eye]{
+    position: absolute;
+    width: 1.2cm;
+    margin-top: 13px;   
+}
+.txt{ /* centrage + personalisation */
+    font-size: 13pt;
+    font-family: 'Calibri', sans-serif;
+    color: black;  
+}
+.tete{
+    position: absolute;
+    margin-top: 10px;
+}
+.nouveau{
+    text-align: center;
+}
+.logo{
+    text-align: center;
+}
+.supp{
+    font-size: 10pt;
+    text-align: center;
+    margin-top: 30px;
+}  
+.error-message {
+    color: red;
+}
+h1{   /* personalisation */
+    font-family: 'Calibri';
+    color: beige;
+    text-align: center;
+    font-size: 24pt;
+}
+h2{
+    font-size: 12pt;
+    font-weight: 400;
+}
+h3{
+    font-size: 12pt;
+    font-weight: 400;
+}
+h4{
+    font-size: 12pt;
+    font-weight: 400;
+}
+input[type=submit]:hover{  /* implementation d'effet visuel au survolage */
+    filter: brightness(1.05);
+}
+a:hover{
+    filter: brightness(1.2);
+}
+a:hover{
+    text-decoration: none;
+}

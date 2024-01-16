@@ -1,0 +1,424 @@
+body{ 
+    background-color: beige !important; 
+}
+h1{
+    color: #4A525D; 
+    font-family: 'Bahnschrift';
+    font-weight: bold;
+    padding-top: 10px; 
+    padding-bottom: 10px;
+}
+h2{
+   font-size: 14pt;
+    color: #4A525D; 
+    font-family: 'Bahnschrift';
+    padding-top: 5px;
+    font-weight: bold;
+}
+p{
+    font-family: 'Bahnschrift';
+    font-weight: lighter;
+}
+.txtstyle{
+    font-family: 'Bahnschrift';
+    font-weight: lighter;
+}
+button{
+    cursor: pointer;
+}
+
+.nomJeu{
+    margin-top: 25px;
+}
+
+.annonce {
+    width: 60%; /* Ajustez la largeur selon vos besoins */
+    margin: 0 auto; /* Pour centrer horizontalement */
+}
+
+
+.flexJeu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.anneeParution,
+    .nbJoueur,
+    .classification{
+        text-align: left; /* Alignement à gauche */
+        margin-bottom: 10px; /* Ajoute un espace entre chaque élément empilé */
+        padding-left: 25px;
+        padding-top: 25px;
+        padding-right: 25px;
+    }
+
+.description{
+    text-align: justify;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-right: 25px;
+}
+
+.bold{
+    
+}
+
+.annonceJeu{
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    align-items: flex-start;
+    height: 15em;
+    width: 55%;
+    height: 65vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: solid 1px grey;
+}
+
+#haut{  
+    height: 10em;
+    width: 100%;
+    left:0;
+    top:0;
+    right:0;
+    background-color: #F5DE56;
+    border-bottom: solid 1px grey;
+}
+#haut a{
+    color: #50632A;
+    text-decoration: underline;
+    font-family: "Bahnschrift";
+    font-weight: bold;   
+}
+#logo{
+    display: block;
+    max-width: 100%;
+	height: 7em;
+}
+.row {
+    margin: 0;
+    padding: 0;
+}
+.zone{
+    margin-right: auto;
+    margin-left: auto;
+    border: none;
+}
+.mid{
+    margin-top: 0.5em;
+}
+.flexcentre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bordureSearch{
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid grey;
+}
+.cat, .ville{
+    height: 50px;
+    border-right: solid 1px grey;
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+}
+.loupe{
+    height: 50px;
+    border-left: solid 1px grey;
+    border-top: solid 1px grey;
+    border-bottom: solid 1px grey;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+}
+select{
+    background-color: beige;
+}
+select option{
+    background-color: white;
+}
+select option[value="Tout"]{
+    background-color: lightgray;
+}
+.iconsize{
+    height: 50px;
+    width: 50px;
+    border-radius:10px 0 0 10px;
+    background-color: lightgray;
+}
+.iconsize2{
+    height: 50px;
+    width: 50px;
+    border-radius: 0 10px 10px 0;
+    background-color: #D7E3BF;
+}
+.bordurenone{
+    border: none;
+}
+.paddingsearch{
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.search{
+    border-radius: 10px;
+    background-color: #9DBB61;
+    margin-top: 40px;
+    width: 200px;
+    height: 30px;
+    border: solid 1px grey;
+}
+.flex{
+    display: flex;
+    margin-bottom: 50px;
+}
+#milieu{
+    margin-left: auto;
+    margin-right: auto;
+}
+.annonce{
+    height: 15em;
+    width: 55%;
+    height: 65vh;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: solid 1px grey;
+}
+.borderright{
+    border-right: solid 1px grey;
+    padding: 10px;
+}
+.tailleimg{
+    height: 150px;
+    width: 170px;
+}
+.navdepage{
+    color: #4A525D;
+}
+.like{
+    text-align: end;
+    padding-right: 15px;
+    padding-top: 20px;
+}
+.taille{
+    width: 100%;
+}
+.emprunter{
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 30px;
+}
+.emprunt{
+    height: 40px;
+    width: 150px;
+    background-color: #9DBB61;
+    border: solid 0.5px grey;
+}
+.heart{
+    background-color: white;
+}
+.desc{
+    padding: 20px;
+}
+.tri{
+    margin-right: 20px;
+    height: 35px;
+    padding: 5px;
+}
+.save{
+    background-color: #9DBB61;
+    border: solid 0.5px grey;
+    height: 35px;
+    padding: 5px;
+}
+.none{
+    display: none;
+}
+
+@media (max-width : 750px) {
+    body{ 
+        background-color: beige; 
+    }
+    #haut{  
+        height: 2cm;
+        width: 100%;
+        left:0;
+        top:0;
+        right:0;
+        background-color: #F5DE56;
+        border-bottom: solid 1px grey;
+    }
+    
+    #logo{
+        display: block;
+        width: 125px;
+        height: 75px;
+        padding-top: 2px;
+    }
+    
+    .row {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .zone{
+        width: auto;
+        margin-right: auto;
+        margin-left: auto;
+        background-color: beige;
+        border: none;
+        margin-bottom: 350px;
+    }
+    .navdepage{
+        color: #4A525D;
+    }
+
+    .cat, .save, .emprunter, .titreannonce, .sup, .tel{
+        display: none;
+    }
+    #milieu{
+        margin: 0;
+        padding-top: 1em;
+        text-align: center;
+    }
+    .annonce{
+        height: 150px;
+        width: 22em;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .tailleimg{
+        height: 100px;
+        width: 120px;
+    }
+    .mid{
+        height: 40px;
+    }
+    .loupe, .ville{
+        background-color: white;
+        height: 2em;
+    }
+    .iconsize2, .iconsize{
+        background-color: lightgrey;
+        height: 2em;
+    }
+    input{
+        margin: 2px;
+        padding: 0;
+    }
+    #milieu{
+        padding-left: 3em;
+    }
+    .none{
+        display: flex;
+    }
+    .search, .like{
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .test, .desc{
+        padding-bottom: 0;
+        height: 1.5em;
+    }
+    .logo{
+        padding-left: 0;
+    }
+    .bars{
+        cursor: pointer;
+    }
+}
+    
+.Form{
+    text-align: center;
+}
+
+.BoutonV{
+background-color: #F5DE56;
+width: 26em;
+height: 2.5em;
+}
+.MDPO{
+    font-size: small;
+    margin-left: 1em;
+}
+.MDP2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 5em;
+}
+.Con{
+    margin-right: 2.4em;
+}
+.Ligne{
+    width: 26em;
+    background-color: black;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 15px;
+    background: #BABABA;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #50632A;
+    cursor: pointer;
+  }
+.slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #50632A;
+    cursor: pointer;
+  }
+datalist{
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    overflow: hidden;
+    margin-top: 2px; 
+}
+
+.imagepret{
+    border-radius: 10px;
+    background-color: #9DBB61;
+    margin-top: 40px;
+    margin-right: 20px;
+    width: 200px;
+    height: 30px;
+    border: solid 1px grey;
+}
+.descimage{
+    text-align: right;
+    margin-right: 65px;
+    padding-top: 10px;
+}
+
+.soumettre{
+    border-radius: 10px;
+    background-color: #9DBB61;
+    width: 200px;
+    height: 30px;
+    border: solid 1px grey;
+}
+
+.check{
+    text-align: center;
+}
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/db3a5df05e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="StyleCreationPage.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Référencement de Jeu Libre</title>
+</head>
+<body>
+    <header>
+        <div class="row align-items-center" id="haut">          
+            <div class="col-xl-4 col-11 logo"><img class="mx-auto d-block" id="logo" src="image/logo.png" alt="Logo LudiCrousLand"></div> 
+        </div>
+    </header>
+    <div id="milieu">
+        <h1>Référencer un nouveau jeu</h1>    
+    </div>
+    <form action="traitement_creation_page.php" method="post">
+        <label for="nom-jeu">Nom du Jeu :</label>
+        <input type="text" id="nom-jeu" name="nom-jeu" required><br><br>
+
+        <label for="nb-joueurs">Nombre de Joueurs :</label>
+        <input type="number" id="nb-joueurs" name="nb-joueurs" required><br><br>
+
+        <label for="classification-esrb">Classification ESRB :</label>
+        <select id="classification-esrb" name="classification-esrb">
+            <option value="E">E - Tout public</option>
+            <option value="E10+">E10+ - 10 ans et plus</option>
+            <option value="T">T - Adolescents</option>
+            <option value="M">M - Mature 17+</option>
+            <option value="A">A - Adultes</option>
+        </select><br><br>
+
+        <label for="description-jeu">Description du Jeu :</label>
+        <textarea id="description-jeu" name="description-jeu" rows="4" required></textarea><br><br>
+
+        <label for="lien-youtube">Lien YouTube :</label>
+        <input type="url" id="lien-youtube" name="lien-youtube"><br><br>
+
+        <label for="duree-partie">Durée de la Partie (en minutes) :</label>
+        <input type="number" id="duree-partie" name="duree-partie"><br><br>
+
+        <label for="specificite-jeu">Spécificité du Jeu (de 1 à 5) :</label>
+        <input type="number" id="specificite-jeu" name="specificite-jeu" min="1" max="5"><br><br>
+
+        <input type="submit" value="Soumettre">
+    </form>
+</body>
+</html>

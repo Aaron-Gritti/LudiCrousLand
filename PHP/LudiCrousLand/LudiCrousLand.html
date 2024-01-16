@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/db3a5df05e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="Styles.css">
+    <title>LudiCrousLand</title>
+</head>
+
+<body>
+<header>
+    <div class="row align-items-center" id="haut">
+        <div class="none col-1 bars"><i class="barre fa-solid fa-bars"></i></div>
+        <div class="col-xl-4 text-right d-none d-md-block"><a href="CreationPage.html">Créer une page</a></div>
+        <div class="col-xl-4 col-11 logo"><img class="mx-auto d-block" id="logo" src="image/logo.png" alt="Logo LudiCrousLand"></div>
+        <div class="col-xl-4 d-none d-md-block"><a href="Connexion.html">Déconnexion</a></div>
+    </div>
+</header>
+<div class="container zone ">
+    <div class="d-flex justify-content-between">
+
+        <div class="flexcentre mid ">
+            <div class="bordureSearch flexcentre iconsize">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="cat flexcentre">
+                <select class="txtstyle bordurenone paddingsearch" id="liste" name="Cat" size="1">
+                    <option value="Placeholder" disabled selected hidden>Catégories</option>
+                    <option value="Tout">Tout</option>
+                    <option value="Famille">A100 Jeu d'exercice</option>
+                    <option value="Enfant">A200 Jeu symbolique</option>
+                    <option value="Carte">A300 Jeu d'assemblage</option>
+                    <option value="Plateau">A400 Jeu de règles</option>
+                </select>
+            </div>          
+        </div>
+
+        <div class="flexcentre mid  ">
+            <div class="loupe flexcentre">
+                <input class="txtstyle bordurenone" type="search" placeholder=" Recherchez...">
+            </div>
+            <div class="bordureSearch flexcentre iconsize2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+        </div>
+              
+    </div>
+</div>
+<div class="flex annonce">
+    <div id="Esar">La classification ESAR distingue les jeux par 'facettes', la facette A représente les types de jeux : <br><br><br> <br> <br><br><br> Pour plus d'informations cliquez :  <br> <a href="https://www.creation-ludotheque.fr/blog/classifier-et-ranger-les-jeux-et-jouets-en-ludotheque-avec-le-systeme-e-s-a-r/" target="_blank">ici</a> </div>
+    <div id="div1" style="height: 15em;">
+        <div id="div2" style="height: inherit; overflow: auto; ">
+          <div id="div3" style="height:fit-content;border-left:1px solid black;">
+            <ul>
+                <li class="li-sep">
+                    A100 Jeu d'exercice
+                    <ul>
+                        <li>A101 Jeu sensoriel sonore</li>
+                        <li>A102 Jeu sensoriel visuel</li>
+                        <li>A103 Jeu sensoriel tactile </li>
+                        <li>A104 Jeu sensoriel olfactif</li>
+                        <li>A105 Jeu sensoriel gustatif</li>
+                        <li>A106 Jeu moteur</li>
+                        <li>A107 Jeu de manipulation</li>
+                        <li>A108 Jeu d’action-réaction virtuel</li>
+                    </ul>
+                </li>
+                <li class="li-sep">
+                    A200 Jeu symbolique
+                    <ul>
+                        <li>A201 Jeu à rôle</li>
+                        <li>A202 Jeu de mise en scène</li>
+                        <li>A203 Jeu de production graphique à deux dimensions</li>
+                        <li>A204 Jeu de production à trois dimensions</li>
+                        <li>A205 Jeu de simulation virtuel</li>
+                    </ul>
+                </li>
+                <li class="li-sep">
+                    A300 Jeu d’assemblage
+                    <ul>
+                        <li>A301 Jeu de construction à 3 dimensions</li>
+                        <li>A302 Jeu d’agencement à 2 dimensions</li>
+                        <li>A303 Jeu de montage scientifique</li>
+                        <li>A304 Jeu de montage virtuel</li>
+                    </ul>
+                </li>
+                <li class="li-sep">
+                    A400 Jeu de règles 
+                    <ul>
+                        <li>A401 Jeu d’association</li>
+                        <li>A402 Jeu de séquence</li>
+                        <li>A403 Jeu de circuit et de parcours</li>
+                        <li>A404 Jeu d’adresse</li>
+                        <li>A405 Jeu sportif et moteur</li>
+                        <li>A406 Jeu de stratégie</li>
+                        <li>A407 Jeu de hasard</li>
+                        <li>A408 Jeu questionnaire</li>
+                        <li>A409 Jeu mathématique</li>
+                        <li>A410 Jeu de langage et d’expression</li>
+                        <li>A411 Jeu d’énigme</li>
+                        <li>A412 Jeu de règles virtuel</li>
+                    </ul>
+                </li>
+            </ul>
+           </div>
+        </div>
+      </div>     
+</div>
+
+
+<div>
+    <div id="milieu">
+        <h1>Jeux</h1>    
+    </div>
+        <br>
+        <div class="flex annonce">
+            <div class="borderright">
+                <img class="tailleimg" src="image/qui.jfif" alt="image">
+                <h2 class="tel">Titre du jeu</h2>
+                <p class="tel">Description...</p>
+            </div>
+            <div class="taille">
+                <div class="emprunter">
+                    <button class="emprunt bordurenone">Voir la page</button>
+                </div>
+                <div class="desc">
+                    <h2 class="none">Titre du jeu</h2>
+                    <p>Descriptif<br>Coordonnées</p>
+                </div>
+                <div class="like ">
+                    <button class="bordurenone heart">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="flex annonce">
+            <div class="borderright">
+                <img class="tailleimg" src="image/lynx.jfif" alt="image">
+                <h2 class="tel">Titre du jeu</h2>
+                <p class="tel">Description...</p>
+            </div>
+            <div class="taille">
+                <div class="emprunter">
+                    <button class="emprunt bordurenone">Voir la page</button>
+                </div>
+                <div class="desc">
+                    <h2 class="none">Titre du jeu</h2>
+                    <p>Descriptif<br>Coordonnées</p>
+                </div>
+                <div class="like ">
+                    <button class="bordurenone heart">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="txtstyle flexcentre "> 
+            <nav>
+            <table>
+                <tr>
+                <td> <a href="" class="navdepage">Préc</a>&ensp;</td>
+                <td> <a href="" class="navdepage">1</a> - </td>
+                <td> <a href="" class="navdepage">2</a> - </td>
+                <td> <a href="" class="navdepage">3</a> - </td>
+                <td> <a href="" class="navdepage">4</a> - </td>
+                <td> <a href="" class="navdepage">5</a> - </td>
+                <td> <a href="" class="navdepage">6</a> - </td> 
+                <td> <a href="" class="navdepage">7</a> - </td> 
+                <td> <a href="" class="navdepage">8</a> - </td> 
+                <td> <a href="" class="navdepage">9</a> - </td> 
+                <td> <a href="" class="navdepage">10</a>&ensp;</td> 
+                <td> <a href="" class="navdepage">Suiv</a></td>
+            </tr>
+        </table>
+            </nav>
+        </div>
+    </div>
+    </body>
+    </html>

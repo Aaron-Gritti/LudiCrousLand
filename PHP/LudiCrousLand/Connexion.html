@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="stylesheet" href="StyleConnexion.css"> <!-- Lien vers une feuille de style externe -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LudiCrousLand</title> <!-- Titre de la page -->
+</head>
+<body> <!-- Début du corps de la page -->
+    <div class="logo">
+            <img src="image/logo.png" alt="logo du site"> <!-- Logo du site avec un lien vers "LudiCrousLand.html" -->
+    </div>
+    <br>
+
+    <section class="boite1">
+        <!-- Conteneur contenant les formulaires et le bouton de connexion -->
+        <form action="traitement_connexion.php" method="post">
+            <img class="tete" src="image/tete.png" alt="Icone d'utilisateur">
+            <input type="text" name="username" placeholder="Nom d'utilisateur">
+            <img src="image/eye_close.png" alt="Aficher le mot de passe" id="eye" onclick="changer()">
+            <input type="password" name="password" placeholder="Mot de passe" id="MDP">
+            <input type="submit" value="Connexion">
+        </form>
+        <br>
+        <br>
+        <a href="CreationCompte.html">Mot de passe oublié ?</a> <!-- Lien vers "motdepasseoubliehtml.html" -->
+    </section>
+    <br><br>
+
+    <section class="boite2 txt nouveau">
+        <!-- Deuxième conteneur contenant un lien vers la création de compte -->
+        <h4>Vous êtes nouveau ? <a href="CreationCompte.html">Créer un compte</a></h4>
+    </section>
+    <br>
+
+    <div class="supp"><a href="">Contacter le support</a></div> <!-- Lien pour contacter le support (laissez le champ href vide pour l'instant) -->
+
+    <script>
+        var x = true;
+        function changer() {
+            /* Fonction permettant de basculer l'affichage du mot de passe en cliquant sur l'icône de l'œil */
+            if (x) {
+                document.getElementById("MDP").setAttribute("type", "text");
+                document.getElementById("eye").src = "image/eye_open.png";
+                x = false;
+            } else {
+                document.getElementById("MDP").setAttribute("type", "password");
+                document.getElementById("eye").src = "image/eye_close.png";
+                x = true;
+            }
+        }
+    </script>
+</body>
+</html>
