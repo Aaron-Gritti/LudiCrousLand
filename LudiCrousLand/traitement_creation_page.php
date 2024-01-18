@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         fclose($fichier);
 
         // Redirigez l'utilisateur vers la page de liste des jeux
-        header("Location: VisionJeux.html");
+        header("Location: VisionJeux.php");
         exit(); // Assurez-vous de terminer le script après la redirection
     } else {
         // Gestion d'erreur si l'ouverture du fichier échoue

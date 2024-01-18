@@ -30,31 +30,37 @@
             </div>  
         </div>
     </header>
+    
+    <?php
+    
+        $jeuxData = file("jeux.txt");
+
+        // Assuming you want to display the latest game's data
+        $latestGame = end($jeuxData);
+        $gameInfo = explode('|', $latestGame);
+
+        // Assigning values to variables for easier use in HTML
+        list($nomJeu, $nbJoueurs, $classificationESRB, $descriptionJeu, $lienYouTube, $dureePartie, $specificiteJeu) = $gameInfo;
+    ?>
+
     <div class="container zone ">
         <div id="milieu" class="nomJeu">
-            <h1>Titre du Jeu</h1>
+            <h1><?php echo $nomJeu; ?></h1>
         </div>
     </div>
+
     <div class="flexJeu annonceJeu">
         <div class="anneeParution">
             <p>Date de parution du jeu : 2000</p>
         </div>
         <div class="nbJoueur">
-            <p>Nombre de joueur : 14 joueur</p>
+            <p>Nombre de joueur : <?php echo $nbJoueurs; ?> joueur</p>
         </div>
         <div class="classification">
-            <p>Classification ESRB E - Tout public</p>
+            <p>Classification ESRB <?php echo $classificationESRB; ?></p>
         </div>
         <div class="description">
-            <P>Description du jeu
-                <br>           
-                Vestibulum vitae pharetra turpis. Nam vehicula, diam nec placerat efficitur, elit turpis semper est, vel laoreet sapien odio non dui. 
-                Nam lobortis nisi sed nunc pellentesque, ut suscipit orci volutpat. Phasellus vulputate justo sit amet tempor dapibus. 
-                Integer hendrerit diam ut justo ornare, ac vehicula risus tincidunt. Etiam rutrum aliquet ipsum, ut pellentesque est hendrerit et. 
-                Nulla feugiat lobortis magna volutpat accumsan. Nam laoreet vulputate nisi blandit tincidunt. 
-                Curabitur non augue gravida, consectetur massa nec, suscipit odio. Ut eget enim enim. Sed cursus velit et mi pulvinar interdum. 
-                Sed eget tempor neque. 
-            </p>
+            <p>Description du jeu<br><?php echo $descriptionJeu; ?></p>
         </div>
     </div>
 </body>
