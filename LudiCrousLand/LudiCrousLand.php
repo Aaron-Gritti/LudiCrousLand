@@ -23,7 +23,7 @@
                 </li>
             </ul> 
             <div class="logo-container">
-                <a href="LudiCrousLand.html">
+                <a href="LudiCrousLand.php">
                     <img class="logo" src="image/logo.png" alt="Logo LudiCrousLand">
                 </a>
             </div>  
@@ -178,86 +178,51 @@
             </div>      
         </div>
         
-        <div class="PJeux">   
-        <h1>Jeux du moment</h1>     
-        <div>
-            <div class="Jeu">
-                <h2><a href="VisionJeux.html">Dixit</a></h2>
-                <img src="image/Dixit.png" alt="Dixit">                
-                <p class="Desc">
-                    Laissez-vous inspirer par ses illustrations poétiques..!
-                    <br>
-                    Dixit est un jeu de société qui vous emmène dans un monde onirique où de douces illustrations vous serviront d'inspiration pour de belles envolées poétiques.
-                </p>
-                <p class="Jinfo">
-                    3 à 8 Joueur
-                    <br>
-                    <br>
-                    Environ 30min.
-                    <br>
-                    <br>
-                    À partir de 8 ans                    
-                </p>
-                <p class="Coo">
-                    <br>
-                    Reserver (Coordonnée)
-                </p>
-                <a href="VisionJeux.html">
-                    <button type="button">Voir la page</button>
-                </a>
-            </div>
-            <br>
-            <div class="Jeu">
-                <h2><a href="VisionJeux.html">CodeName</a></h2>               
-                <img src="image/Codename.png" alt="Codename">
-                <p class="Desc">
-                    Jouez les espions et retrouvez vos alliés avec des Noms de Code!
-                    <br>
-                    Codenames est un jeu d'expression, d'association d'idées et de déduction qui se joue en équipe. 
-                </p>
-                <p class="Jinfo">
-                    2 à 8 joueurs
-                    <br>
-                    <br>
-                    Environ 15min.
-                    <br>
-                    <br>
-                    À partir de 12 ans
-                </p>
-                <p class="Coo">
-                    <br>
-                    Reserver (Coordonnée)
-                </p>
-                <a href="VisionJeux.html">
-                    <button type="button">Voir la page</button>
-                </a>
-            </div>
-            <br>
-            <div class="Jeu">
-                <h2><a href="VisionJeux.html">Exemple de titre de jeu</a></h2>               
-                <img src="image/Codename.png" alt="Codename">
-                <p class="Desc">
-                    Description...
-                </p>
-                <p class="Jinfo">
-                    nb joueur
-                    <br>
-                    <br>
-                    temps de jeu
-                    <br>
-                    <br>
-                    age mini
-                </p>
-                <p class="Coo">
-                    <br>
-                    Reserver (Coordonnée)
-                </p>
-                <a href="VisionJeux.html">
-                    <button type="button">Voir la page</button>
-                </a>
-            </div>
-        </div>
-        </div>
+        <?php
+            // Read the content of the "jeux.txt" file
+            $jeuxData = file("jeux.txt");
+            ?>
+
+            <?php
+            // Check if the file is not empty and contains games
+            if (!empty($jeuxData) && count($jeuxData) > 0) {
+                // Display the "PJeux" section only if there are games
+                echo '<div class="PJeux">';   
+                echo '<h1>Jeux du moment</h1>';     
+
+                // Loop through each game entry
+                foreach ($jeuxData as $gameEntry) {
+                    // Extract game information
+                    $gameInfo = explode('|', $gameEntry);
+                    
+                    // Check if array keys exist before accessing them
+                    $nomJeu = isset($gameInfo[0]) ? $gameInfo[0] : '';
+                    $paruJeu = isset($gameInfo[1]) ? $gameInfo[1] : '';
+                    $nbJoueurs = isset($gameInfo[2]) ? $gameInfo[2] : '';
+                    $classificationESRB = isset($gameInfo[3]) ? $gameInfo[3] : '';
+                    $descriptionJeu = isset($gameInfo[4]) ? $gameInfo[4] : '';
+                    $lienImage = isset($gameInfo[5]) ? $gameInfo[5] : '';
+                    $lienYoutube = isset($gameInfo[6]) ? $gameInfo[6] : '';
+                    $dureePartie = isset($gameInfo[7]) ? $gameInfo[7] : '';
+                    $specificiteJeu = isset($gameInfo[8]) ? $gameInfo[8] : '';
+
+                    // Display the game information in a card
+                    echo '<div class="Jeu">';
+                    echo '<h2><a href="VisionJeux.php">' . $nomJeu . '</a></h2>';
+                    // Add logic to display image, description, and other game info here
+                    echo '<p class="Desc">' . $descriptionJeu . '</p>';
+                    echo '<p class="Jinfo">Nombre de joueur : ' . $nbJoueurs . '<br>Temps de jeu : ' . $dureePartie . ' minutes';
+                    echo '<a href="VisionJeux.php"><button type="button">Voir la page</button></a>';
+                    echo '</div>';
+                    echo '<br>';
+                }
+
+                echo '</div>';
+            } else {
+                // If there are no games, you can choose to display a message or take other actions
+                echo '<p>Aucun jeu trouvé pour le moment. <a href="CreationPage.html">Ajoutez un jeu maintenant</a>.</p>';
+            }
+        ?>
     </div>
     <br>
     <footer> 

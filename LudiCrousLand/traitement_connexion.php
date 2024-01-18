@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($user_found) {
         // Redirection vers une autre page après la connexion réussie
-        header("Location: LudiCrousLand.html");
+        header("Location: LudiCrousLand.php");
         exit();
     } else {
         // Affichage du message d'erreur sur la page actuelle

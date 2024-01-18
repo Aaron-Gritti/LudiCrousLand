@@ -2,15 +2,17 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérez les données du formulaire
     $nomJeu = $_POST["nom-jeu"];
+    $paruJeu = $_POST["paru-jeu"];
     $nbJoueurs = $_POST["nb-joueurs"];
     $classificationESRB = $_POST["classification-esrb"];
     $descriptionJeu = $_POST["description-jeu"];
+    $lienImage = $_POST["lien-image"];
     $lienYouTube = $_POST["lien-youtube"];
     $dureePartie = $_POST["duree-partie"];
     $specificiteJeu = $_POST["specificite-jeu"];
 
     // Créez une chaîne de données du jeu
-    $nouveauJeu = "$nomJeu|$nbJoueurs|$classificationESRB|$descriptionJeu|$lienYouTube|$dureePartie|$specificiteJeu";
+    $nouveauJeu = "$nomJeu|$paruJeu|$nbJoueurs|$classificationESRB|$descriptionJeu|$lienImage|$lienYouTube|$dureePartie|$specificiteJeu";
 
     // Ouvrez le fichier de stockage des jeux en mode écriture
     $fichier = fopen("jeux.txt", "a");
