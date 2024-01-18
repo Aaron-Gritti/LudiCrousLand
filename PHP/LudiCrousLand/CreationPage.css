@@ -2,15 +2,33 @@ body {
     background-color: beige;
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
 }
 
 header {
-    background-color: #F5DE56;
-    display: flex;
-    justify-content: space-between;
+    background-color: #F5DE56;  
+    text-align: center; 
+    margin-top: 0px;
     align-items: center;
 }
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    
+    align-items: center;
+
+}
+
+.menu{
+    width: 120px;
+    display: inline-block;
+    text-align: center; 
+}
+
+.logo-container{
+    text-align: center;
+}
+
+
 
 h1 {
     color: #4A525D;
@@ -21,16 +39,6 @@ h1 {
     text-align: center;
 }
 
-.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.none {
-    display: none;
-}
-
 form {
     max-width: 600px;
     margin: 20px auto;
@@ -39,6 +47,7 @@ form {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 
 label {
     display: block;
@@ -70,37 +79,13 @@ input[type="submit"]:hover {
     background-color: #f48256;
 }
 
-.container {
-    display: flex;
-    text-align: center;
-}
-
-.logo {
-    width: 100%;
-}
-
-.menu-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-}
-
+/*Partie POur le style du menu deroulant du header*/
 .dropdown {
     padding: 20px 40px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     color: black;
     background: beige;
     position: relative;
-    font-size: 18px;
-    perspective: 1000px;
-    z-index: 100;
 }
 
 .dropdown:hover {
@@ -115,10 +100,8 @@ input[type="submit"]:hover {
 .dropdown_menu {
     position: absolute;
     top: 100%;
-    right: 0;
-    width: 200px; /* Ajustez la largeur au besoin */
-    perspective: 1000px;
-    z-index: -1;
+    left: -40px;
+    width: 160px;
 }
 
 .dropdown_menu li a {
@@ -145,15 +128,6 @@ input[type="submit"]:hover {
 
 .dropdown:hover .dropdown_menu--animated {
     display: block;
-}
-
-.dropdown_menu--animated {
-    display: none;
-}
-
-.dropdown_menu--animated li {
-    display: block;
-    opacity: 1;
 }
 
 .dropdown_menu-1 .dropdown_item-1 {

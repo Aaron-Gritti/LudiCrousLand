@@ -1,5 +1,27 @@
 body{ 
     background-color: beige !important; 
+    font-family: 'Bahnschrift', Arial, sans-serif;
+    margin: 0;
+}
+header {
+    background-color: #d19119f1;  
+    text-align: center; 
+    margin-top: 0px;
+    align-items: center;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    
+    align-items: center;
+}
+.menu{
+    width: 120px;
+    display: inline-block;
+    text-align: center; 
+}
+.logo-container{
+    text-align: center;
 }
 h1{
     color: #4A525D; 
@@ -422,3 +444,79 @@ datalist{
 
 
 
+/*Partie POur le style du menu deroulant du header*/
+.dropdown {
+    padding: 20px 40px;
+    display: flex;
+    color: black;
+    background: beige;
+    position: relative;
+}
+
+.dropdown:hover {
+    background: #f5b856;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown_menu li {
+    display: block;
+}
+
+.dropdown_menu {
+    position: absolute;
+    top: 100%;
+    left: -40px;
+    width: 160px;
+}
+
+.dropdown_menu li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown_menu li a:hover {
+    color: black;
+}
+
+.dropdown_menu li {
+    display: none;
+    color: #fff;
+    background-color: #f5b856;
+    padding: 10px 20px;
+    font-size: 16px;
+    opacity: 0;
+}
+
+.dropdown_menu li:hover {
+    background-color: #f5b856;
+}
+
+.dropdown:hover .dropdown_menu--animated {
+    display: block;
+}
+
+.dropdown_menu-1 .dropdown_item-1 {
+    transform-origin: top center;
+    animation: slideDown 300ms 60ms ease-in-out forwards;
+}
+
+.dropdown_menu-1 .dropdown_item-2 {
+    transform-origin: top center;
+    animation: slideDown 300ms 120ms ease-in-out forwards;
+}
+
+.dropdown_menu-1 .dropdown_item-3 {
+    transform-origin: top center;
+    animation: slideDown 300ms 120ms ease-in-out forwards;
+}
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

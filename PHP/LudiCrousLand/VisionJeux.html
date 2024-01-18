@@ -1,58 +1,61 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/db3a5df05e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="StylesPageJeu.css">
     <title>Page d'un Jeu</title>
 </head>
 
 <body>
-<header>
-    <div class="row align-items-center" id="haut">
-        <div class="none col-1 bars"><i class="barre fa-solid fa-bars"></i>Accueil</div>
-        <div class="col-xl-4 text-right d-none d-md-block"><a href="LudiCrousLand.html">Accueil</a></div>
-        <div class="col-xl-4 col-11 logo"><img class="mx-auto d-block" id="logo" src="image/logo.png" alt="Logo LudiCrousLand"></div>
-        <div class="col-xl-4 d-none d-md-block"><a href="Connexion.html">Déconnexion</a></div>
-    </div>
-</header>
-<div class="container zone ">
-    <div class="d-flex justify-content-between">
-              <div id="milieu" class="nomJeu">
-                <h1>Titre du Jeu</h1>
-              </div>
-    </div>
-</div>
-
-        <div>
-            <div class="flexJeu annonceJeu">
-                <div class="anneeParution">
-                    <p>Date de parution du jeu : 2000</p>
-                </div>
-                <div class="nbJoueur">
-                    <p>Nombre de joueur : 14 joueur</p>
-                </div>
-                <div class="classification">
-                    <p>Classification ESRB E - Tout public</p>
-                </div>
-                <div class="description">
-                    <P>Description du Jeu</P>
-                    <p>
-                        Vestibulum vitae pharetra turpis. Nam vehicula, diam nec placerat efficitur, elit turpis semper est, vel laoreet sapien odio non dui. 
-                        Nam lobortis nisi sed nunc pellentesque, ut suscipit orci volutpat. Phasellus vulputate justo sit amet tempor dapibus. 
-                        Integer hendrerit diam ut justo ornare, ac vehicula risus tincidunt. Etiam rutrum aliquet ipsum, ut pellentesque est hendrerit et. 
-                        Nulla feugiat lobortis magna volutpat accumsan. Nam laoreet vulputate nisi blandit tincidunt. 
-                        Curabitur non augue gravida, consectetur massa nec, suscipit odio. Ut eget enim enim. Sed cursus velit et mi pulvinar interdum. 
-                        Sed eget tempor neque. 
-                    </p>
-                </div>
-            </div>
+    <header>        
+        <div class="container">                  
+            <ul class="menu">
+                <li class="dropdown dropdown-1">Menu
+                    <ul class="dropdown_menu dropdown_menu-1">
+                        <li class="dropdown_item-1">
+                            <a href="CreationPage.html">Ajouter un jeu</a>
+                        </li>
+                        <li class="dropdown_item-2">
+                            <a href="Connexion.html">Déconnexion</a>
+                        </li>
+                        <li class="dropdown_item-3">
+                            <a href="LudiCrousLand.html">Accueil</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul> 
+            <div class="logo-container">
+                <a href="LudiCrousLand.html">
+                    <img class="logo" src="image/logo.png" alt="Logo LudiCrousLand">
+                </a>
+            </div>  
         </div>
-    </body>
+    </header>
+    <div class="container zone ">
+        <div id="milieu" class="nomJeu">
+            <h1>Titre du Jeu</h1>
+        </div>
+    </div>
+    <div class="flexJeu annonceJeu">
+        <div class="anneeParution">
+            <p>Date de parution du jeu : 2000</p>
+        </div>
+        <div class="nbJoueur">
+            <p>Nombre de joueur : 14 joueur</p>
+        </div>
+        <div class="classification">
+            <p>Classification ESRB E - Tout public</p>
+        </div>
+        <div class="description">
+            <P>Description du jeu
+                <br>           
+                Vestibulum vitae pharetra turpis. Nam vehicula, diam nec placerat efficitur, elit turpis semper est, vel laoreet sapien odio non dui. 
+                Nam lobortis nisi sed nunc pellentesque, ut suscipit orci volutpat. Phasellus vulputate justo sit amet tempor dapibus. 
+                Integer hendrerit diam ut justo ornare, ac vehicula risus tincidunt. Etiam rutrum aliquet ipsum, ut pellentesque est hendrerit et. 
+                Nulla feugiat lobortis magna volutpat accumsan. Nam laoreet vulputate nisi blandit tincidunt. 
+                Curabitur non augue gravida, consectetur massa nec, suscipit odio. Ut eget enim enim. Sed cursus velit et mi pulvinar interdum. 
+                Sed eget tempor neque. 
+            </p>
+        </div>
+    </div>
+</body>
 </html>
